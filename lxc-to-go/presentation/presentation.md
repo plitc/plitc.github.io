@@ -1,5 +1,4 @@
 # LXC-to-Go
-
 ## (rapid lxc deployment for mobile devices and servers)
 
 - Daniel ([github](https://github.com/plitc))
