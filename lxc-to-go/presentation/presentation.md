@@ -8,10 +8,12 @@
 
 ## Ablauf
 
-0. [Installation](https://github.com/plitc/lxc-to-go/)
-1. Konzept
+
+0. [Konzept](https://github.com/plitc/lxc-to-go/)
+   - network setup
+1. Features
 2. Grundlagen
-3. Praxis
+3. Demo
 
 Note:
 - Grundlagen:
