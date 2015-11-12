@@ -6,15 +6,17 @@
 - Slides & Code: [github.com/plitc/lxc-to-go](https://github.com/plitc/lxc-to-go)
 
 
-# Ablauf
 
-0. [Konzept](https://github.com/plitc/lxc-to-go/)
-1. Features
-2. Grundlagen
-3. Demo
+## Ablauf
+
+1. Konzept
+2. Features
+3. Grundlagen
+4. Demo
 
 Note:
 - Grundlagen:
+
 
 
 ## Motivation
