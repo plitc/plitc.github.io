@@ -6,7 +6,7 @@
 
 
 
-## Konzepte / Motivation (1-8)
+## Konzepte / Motivation (1-7)
 
 - einfache Container Lösung!
  * fertige LXC configs & templates
@@ -25,7 +25,7 @@ usage: /usr/local/sbin/lxc-to-go { bootstrap | start | stop | shutdown | create 
 
 
 
-## Konzepte / Motivation (2-8)
+## Konzepte / Motivation (2-7)
 
 - einfacher Bootstrap Prozess
 
@@ -35,7 +35,7 @@ usage: /usr/local/sbin/lxc-to-go { bootstrap | start | stop | shutdown | create 
 
 
 
-## Konzepte / Motivation (3-8)
+## Konzepte / Motivation (3-7)
 
 - Bootstrap Example
 
@@ -218,7 +218,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (4-8)
+## Konzepte / Motivation (4-7)
 
 - erstellt einen flexiblen Managed Container für DHCP, DNS & RA Services
 - automatische NAT Portforwarding Regeln für interne LXCs
@@ -231,7 +231,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (5-8)
+## Konzepte / Motivation (5-7)
 
 - App Container Templates
 
@@ -241,7 +241,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (6-8)
+## Konzepte / Motivation (6-7)
 
 - Nested LXC / LXC-inside-LXC Container Webpanel
  * für Wegwerf inside LXC, Docker Container
@@ -252,152 +252,12 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (7-8)
+## Konzepte / Motivation (7-7)
 
 - PulseAudio Control der internen LXCs
 - Graphics Acceleration in internen LXCs
 
-
-```shell
-
-170 Verbindungsfehler: Verbindung verweigert
-171 pa_context_new() fehlgeschlagen: Verbindung verweigert
-172 [FAILED] 'PulseAudio Access denied! but skipping ...'
-173 [ INFO ] PulseAudio maybe listen on (vswitch0) Port 4713 now!
-174 [  OK  ] 'optional: prepare lxc x11 video / audio environment'
-
-```
-
-
-lxc-to-go_inside_.jpg
+[![github plitc lxc-to-go-0.41.3.2.travis29](https://img.youtube.com/vi/tERKMfnBKsY/0.jpg)](https://www.youtube.com/watch?v=tERKMfnBKsY)
 
 
 
- 58 - PulseAudio Control der internen LXCs
- 59 - Graphics Acceleration in internen LXCs
- 60 - Nested LXC / LXC-inside-LXC Container Webpanel
- 61  * für Wegwerf inside LXC, Docker Container
- 62
- 63
- 64
- 65 ## Schema
- 66
- 67 <a href="content/lxc-to-go_schema_.jpg">
- 68    <img src="content/lxc-to-go_schema_.jpg" height="550">
- 69 </a>
- 70
-
-
-## Motivation
-
-- Automatisierung
-- Statistiken/Langzeitdaten
-- Andere Darstellung/Mashups
-
-
-
-## Grundlagen
-
-- Was brauchen wir:
-  - eine Programmiersprache,  ✓ ([Python](python.org))
-  - die Webseiten herunterladen kann ✓ ([Requests](http://docs.python-requests.org/en/latest/))
-  - und parsen kann ✓ ([BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/))
-
-Note:
-- Viele Programmiersprachen sind grundsätzlich geeignet.
-- Ich bevorzuge dynamische Programmiersprachen, wegen interaktiven Shell (später
-  mehr)
-- Wir müssten wie der Browser HTTP sprechen, Python kann das von Haus aus.
-  Requests ist aber schöner zu benutzen
-- Letztendlich muss das HTML der Webseite ausgewertet werden
-
-
-
-## Grundlagen - HTML
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Präsidenten</title>
-  </head>
-  <body>
-    <table id="präsidenten">
-      <tr>
-        <th>Präsidenten</th>
-        <th>Regierungszeiten</th>
-      </tr>
-      <tr>
-        <td>Abraham Lincoln</td>
-        <td class="date">4. März 1861 - 15. April 1865</td>
-      </tr>
-      <tr>
-        <td>Andrew Johnson</td>
-        <td class="date">15. April 1865 - 4. März 1869</td>
-      </tr>
-      <tr>
-        <td>Ulysses S. Grant</td>
-        <td class="date">4. März 1869 - 4. März 1877</td>
-      </tr>
-    </table>
-  </body>
-</html>
-```
-
-
-
-## Grundlagen - CSS Selektoren
-
-<table>
-<tr><td>Selector</td> <td>Example</td> <td>Example description CSS</td></tr>
-<tr><td>.class</td> <td>.date</td> <td>Wählte alle Zeilen mit der Klasse .date aus.</td></tr>
-<tr><td>#id</td> <td>#präsidenten</td> <td>Wählt die Tabelle mit der ID Präsident aus.</td></tr>
-<tr><td>element</td> <td>tr</td> <td>Wählt alle Zeilen der Tabelle aus.</td></tr>
-<tr><td>Komplexbeispiel</td> <td>#präsidenten tr:first-child</td> <td>1. Zeile der Präsidententabelle</td></tr>
-</table>
-
-
-
-
-## Grundlagen - CSS Selektoren
-- Einführung für [CSS-Selektoren](https://developer.mozilla.org/de/docs/Web/Guide/CSS/Getting_started/Selektoren)
-- Einführung für [XPath](https://de.wikipedia.org/wiki/XPath)
-
-
-
-## Grundlagen - Beispiel
-
-```python
-#!/usr/bin/env python
-import requests, random
-from bs4 import BeautifulSoup
-
-url = "https://en.wikipedia.org/wiki/Nicolas_Cage_filmography"
-doc = requests.get(url)
-soup = BeautifulSoup(doc.text, 'html.parser')
-rows = soup.select("table.wikitable.sortable tr")
-choice = random.choice(rows)
-print(choice.select("td i a")[0].text)
-```
-
-```bash
-$ python3 random_cage.py
-```
-
-
-
-## Beispiel
-
-Luzern: http://www.pls-luzern.ch/de
-
-
-
-## Ihr seid dran
-
-- Vorschlag:
-  - Bregenz: https://www.bregenz.gv.at/sicherheit-verkehr/verkehr-und-parken/parkleitsystem.html
-  - [Andere Beispiele](https://github.com/offenesdresden/ParkAPI/issues?q=is%3Aclosed+label%3Anew_data+is%3Aissue)
-- Python Referenz: http://www.cs.put.poznan.pl/csobaniec/software/python/py-qrc.html
-- Beautiful Soup: http://www.crummy.com/software/BeautifulSoup/bs4/doc/
-- Requests: http://docs.python-requests.org/en/latest/
