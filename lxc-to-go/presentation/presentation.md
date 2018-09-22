@@ -168,42 +168,21 @@ usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
 [  OK  ] 'configure lxc-to-go symlinks - stage 1'
 [  OK  ] 'configure lxc-to-go symlinks - stage 2'
 [  OK  ] 'configure lxc-to-go etc/hosts entry'
-Verbindungsfehler: Verbindung verweigert
-pa_context_new() fehlgeschlagen: Verbindung verweigert
-[FAILED] 'PulseAudio Access denied! but skipping ...'
 [ INFO ] PulseAudio maybe listen on (vswitch0) Port 4713 now!
 [  OK  ] 'optional: prepare lxc x11 video / audio environment'
 
 ● isc-dhcp-server.service - LSB: DHCP server
    Loaded: loaded (/etc/init.d/isc-dhcp-server)
-   Active: active (running) since Mi 2018-09-19 09:26:31 CEST; 2 days ago
-  Process: 161 ExecStart=/etc/init.d/isc-dhcp-server start (code=exited, status=0/SUCCESS)
-   CGroup: /system.slice/isc-dhcp-server.service
-           └─169 /usr/sbin/dhcpd -q -cf /etc/dhcp/dhcpd.conf -pf /var/run/dhcpd.pid
 
-Hint: Some lines were ellipsized, use -l to show in full.
 [  OK  ] 'lxc: managed isc-dhcp-server'
 
-● unbound.service - (null)
+● unbound.service
    Loaded: loaded (/etc/init.d/unbound)
-  Drop-In: /run/systemd/generator/unbound.service.d
-           └─50-insserv.conf-$named.conf, 50-unbound-$named.conf
-   Active: active (running) since Mi 2018-09-19 09:26:29 CEST; 2 days ago
-  Process: 109 ExecStart=/etc/init.d/unbound start (code=exited, status=0/SUCCESS)
- Main PID: 159 (unbound)
-   CGroup: /system.slice/unbound.service
-           └─159 /usr/sbin/unbound
 
-Hint: Some lines were ellipsized, use -l to show in full.
 [  OK  ] 'lxc: managed unbound'
 
 ● radvd.service - LSB: Router Advertising Daemon
    Loaded: loaded (/etc/init.d/radvd)
-   Active: active (running) since Mi 2018-09-19 09:26:27 CEST; 2 days ago
-  Process: 107 ExecStart=/etc/init.d/radvd start (code=exited, status=0/SUCCESS)
-   CGroup: /system.slice/radvd.service
-           ├─129 /usr/sbin/radvd -u radvd -p /var/run/radvd/radvd.pid
-           └─131 /usr/sbin/radvd -u radvd -p /var/run/radvd/radvd.pid
 
 [  OK  ] 'lxc: managed radvd'
 [  OK  ] 'optional: sysctl for unprivileged containers'
@@ -221,10 +200,9 @@ lxc-to-go bootstrap finished.
 
 ## Konzepte / Motivation (4-7)
 
-- erstellt einen flexiblen Managed Container für DHCP, DNS & RA Services
+- erstellt einen Managed Container für DHCP, DNS & RA Services
 - automatische NAT Portforwarding Regeln für interne LXCs
- * IPv4 192.168.254.xxx/24
- * IPv6 fd00:xxxx/64
+ * IPv4 192.168.254.xxx/24 & IPv6 fd00:xxxx/64
 
 <a href="content/lxc-to-go_desktop_.jpg">
    <img src="content/lxc-to-go_desktop_.jpg" height="350">
