@@ -28,13 +28,12 @@ Note:
 
 ### Schema
 
-![](content/lxc-to-go_schema_.jpg)
 
   <a href="lxc-to-go_schema_.jpg">
     <img src="content/lxc-to-go_schema_.jpg" height="350">
   </a>
 
-![](content/lxc-to-go_schema_.jpg)
+![](content/lxc-to-go_schema_.jpg | width=800 )
 
 ## Motivation
 
