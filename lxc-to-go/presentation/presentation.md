@@ -26,7 +26,7 @@ Note:
 
 
 
-## Schema
+##
 
 ![](content/lxc-to-go_schema_.jpg)
 
