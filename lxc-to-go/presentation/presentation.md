@@ -21,19 +21,21 @@ Note:
 ## Konzept / Motivation
 
 - einfache Container Lösung
-(auch geeignet für Laptops mit wechselnder Netzanbindung)
-- 
+* (auch geeignet für Laptops mit wechselnder Netzanbindung)
+- erstellt Managed Container mit DHCP, DNS & RA Service für interne LXCs
+- automatische IPv4 (192.168.254.xxx/24) / IPv6 (fd00:xxxx/64) NAT Portforward Regeln für interne LXCs
+- PulseAudio Control der LXCs
+- graphics acceleration in LXCs
 
 
 
-### Schema
+## Schema
+
+<a href="lxc-to-go_schema_.jpg">
+   <img src="content/lxc-to-go_schema_.jpg" height="350">
+</a>
 
 
-  <a href="lxc-to-go_schema_.jpg">
-    <img src="content/lxc-to-go_schema_.jpg" height="350">
-  </a>
-
-![](content/lxc-to-go_schema_.jpg | width=800 )
 
 ## Motivation
 
