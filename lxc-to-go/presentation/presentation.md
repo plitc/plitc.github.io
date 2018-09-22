@@ -23,9 +23,10 @@ Note:
 - einfache Container Lösung
 * (auch geeignet für Laptops mit wechselnder Netzanbindung)
 - erstellt Managed Container mit DHCP, DNS & RA Service für interne LXCs
-- automatische IPv4 (192.168.254.xxx/24) / IPv6 (fd00:xxxx/64) NAT Portforward Regeln für interne LXCs
+- automatische IPv4 (192.168.254.xxx/24) / IPv6 (fd00:xxxx/64) NAT Portforwarding Regeln für interne LXCs
 - PulseAudio Control der LXCs
-- graphics acceleration in LXCs
+- Graphics Acceleration in LXCs
+- LXC-inside-LXC Container Webpanel (für Wegwerf LXC, Docker Container) / Nested LXC
 
 
 
