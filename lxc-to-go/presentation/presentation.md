@@ -8,7 +8,7 @@
 
 ## Ablauf
 
-1. Konzept
+1. Konzept / Motivation
 2. Features
 3. Grundlagen
 4. Demo
@@ -18,13 +18,12 @@ Note:
 
 
 
-## Motivation
+## Konzept / Motivation
 
-- Parkplatzübersicht Stuttgart auf Android
+- einfache Container Lösung (auch geeignet für Laptops mit wechselnder Netzanbindung)
+- 
 
-<a href="Screenshot_2015-10-23-21-51-37.png">
-  <img src="Screenshot_2015-10-23-21-51-37.png" height="350" alt="Stuttgart Parkplatzübersicht">
-</a>
+![](content/lxc-to-go_schema_.jpg)
 
 
 
