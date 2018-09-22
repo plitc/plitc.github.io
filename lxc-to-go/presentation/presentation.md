@@ -207,7 +207,7 @@ lxc-to-go bootstrap finished.
  * IPv4 192.168.254.xxx/24 & IPv6 fd00:xxxx/64
 
 <a href="content/lxc-to-go_desktop_.jpg">
-   <img src="content/lxc-to-go_desktop_.jpg" height="350">
+   <img src="content/lxc-to-go_desktop_.jpg" height="300">
 </a>
 
 
@@ -217,7 +217,7 @@ lxc-to-go bootstrap finished.
 - App Container Templates!
 
 <a href="content/lxc-to-go_inside_.jpg">
-   <img src="content/lxc-to-go_inside_.jpg" height="350">
+   <img src="content/lxc-to-go_inside_.jpg" height="300">
 </a>
 
 
@@ -228,7 +228,7 @@ lxc-to-go bootstrap finished.
  * für Wegwerf inside LXC, Docker Container
 
 <a href="content/lxcwebpanel.png">
-   <img src="content/lxcwebpanel.png" height="350">
+   <img src="content/lxcwebpanel.png" height="300">
 </a>
 
 
