@@ -6,32 +6,26 @@
 
 
 
-## Konzepte / Motivation (1-6)
+## Konzepte / Motivation (1-8)
 
 - einfache Container Lösung!
  * fertige LXC configs & templates
  * auch geeignet für Laptops mit wechselnder Netzanbindung
 
 ```shell
-╭─root at it-daniel in /var/lib/lxc/managed using
-╰─○ grep "lxc.cap" config | egrep -v "#"
+╭─root at it-daniel in ~ using
+╰─○ lxc-to-go
 
-lxc.cap.drop=sys_module
-lxc.cap.drop=mac_admin
-lxc.cap.drop=mac_override
-lxc.cap.drop=sys_time
-lxc.cap.drop=sys_boot
-lxc.cap.drop=sys_pacct
-lxc.cap.drop=sys_rawio
-lxc.cap.drop=sys_tty_config
+WARNING: lxc-to-go is experimental and its not ready for production. Do it at your own risk.
 
-╭─root at it-daniel in /var/lib/lxc/managed using
+usage: /usr/local/sbin/lxc-to-go { bootstrap | start | stop | shutdown | create | delete | show | login | lxc-in-lxc-webpanel | security }
+╭─root at it-daniel in ~ using
 ╰─○
 ```
 
 
 
-## Konzepte / Motivation (2-6)
+## Konzepte / Motivation (2-8)
 
 - einfacher Bootstrap Prozess
 
@@ -41,9 +35,9 @@ lxc.cap.drop=sys_tty_config
 
 
 
-## Konzepte / Motivation (3-6)
+## Konzepte / Motivation (3-8)
 
-- erstellt einen flexiblen Managed Container für DHCP, DNS & RA Services
+- Bootstrap Example
 
 ```shell
 ╭─root at it-daniel in ~ using
@@ -224,20 +218,58 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (4-6)
+## Konzepte / Motivation (4-8)
 
+- erstellt einen flexiblen Managed Container für DHCP, DNS & RA Services
 - automatische NAT Portforwarding Regeln für interne LXCs
  * IPv4 192.168.254.xxx/24
  * IPv6 fd00:xxxx/64
 
 <a href="content/lxc-to-go_desktop_.jpg">
-   <img src="content/lxc-to-go_desktop_.jpg" height="500">
+   <img src="content/lxc-to-go_desktop_.jpg" height="350">
 </a>
 
 
 
+## Konzepte / Motivation (5-8)
+
+- App Container Templates
+
+<a href="content/lxc-to-go_inside_.jpg">
+   <img src="content/lxc-to-go_inside_.jpg" height="350">
+</a>
 
 
+
+## Konzepte / Motivation (6-8)
+
+- Nested LXC / LXC-inside-LXC Container Webpanel
+ * für Wegwerf inside LXC, Docker Container
+
+<a href="content/lxcwebpanel.png">
+   <img src="content/lxcwebpanel.png" height="350">
+</a>
+
+
+
+## Konzepte / Motivation (7-8)
+
+- PulseAudio Control der internen LXCs
+- Graphics Acceleration in internen LXCs
+
+
+```shell
+
+170 Verbindungsfehler: Verbindung verweigert
+171 pa_context_new() fehlgeschlagen: Verbindung verweigert
+172 [FAILED] 'PulseAudio Access denied! but skipping ...'
+173 [ INFO ] PulseAudio maybe listen on (vswitch0) Port 4713 now!
+174 [  OK  ] 'optional: prepare lxc x11 video / audio environment'
+
+```
+
+
+lxc-to-go_inside_.jpg
 
 
 
