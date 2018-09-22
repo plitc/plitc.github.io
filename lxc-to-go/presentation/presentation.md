@@ -6,7 +6,7 @@
 
 
 
-## Konzepte / Motivation (1-7)
+## Konzepte / Motivation (1-8)
 
 - einfache Container Lösung!
  * auch geeignet für Laptops mit wechselnder Netzanbindung
@@ -25,7 +25,7 @@ usage: { bootstrap | start | stop | shutdown | create | delete | show | login | 
 
 
 
-## Konzepte / Motivation (2-7)
+## Konzepte / Motivation (2-8)
 
 - einfacher Bootstrap Prozess!
 
@@ -35,7 +35,7 @@ usage: { bootstrap | start | stop | shutdown | create | delete | show | login | 
 
 
 
-## Konzepte / Motivation (3-7)
+## Konzepte / Motivation (3-8)
 
 - Bootstrap Example
 
@@ -198,7 +198,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (4-7)
+## Konzepte / Motivation (4-8)
 
 - erstellt einen Managed Container!
  * für DHCP, DNS & RA Services
@@ -212,7 +212,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (5-7)
+## Konzepte / Motivation (5-8)
 
 - App Container Templates!
 
@@ -222,7 +222,49 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (6-7)
+## Konzepte / Motivation (6-8)
+
+- App Container Templates Example
+
+```shell
+╭─daniel at it-daniel in /github/lxc-to-go/hooks/templates on master✔ using
+╰─± find
+
+.
+./com.docker
+./com.docker_lxcdriver
+./com.docker_x11gui
+./com.github.ether.etherpad-lite.DEV.dirtydb
+./com.github.ether.etherpad-lite.RELEASE.dirtydb
+./com.github.ether.etherpad-lite.dirtydb
+./com.github.ether.etherpad-lite.mariadb
+./com.github.ether.etherpad-lite.mariadb-utf8mb4
+./com.github.letsencrypt
+./com.github.plitc.flower
+./com.github.santex.ai-microstructure
+./com.github.santex.flower
+./com.gitlab.communityedition
+./com.steampowered_x11gui_3d
+./com.sublimetext_x11gui
+./eu.plitc.connect.dn42
+./org.mupen64plus
+./org.openwrt.freeradius.anonymous-eap-ttls
+./org.openwrt.freeradius.public
+./org.owncloud.mysql
+./org.redmine.mariadb
+./org.samba.simple
+./plain.provisioning
+./plain.provisioning_x11gui
+./plain.provisioning_x11gui_3d
+./plain.provisioning_x11gui_browser
+
+╭─daniel at it-daniel in /github/lxc-to-go/hooks/templates on master✔ using
+╰─±
+```
+
+
+
+## Konzepte / Motivation (7-8)
 
 - Nested LXC / LXC-inside-LXC Container Webpanel
  * für Wegwerf inside LXC, Docker Container
@@ -233,7 +275,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Konzepte / Motivation (7-7)
+## Konzepte / Motivation (8-8)
 
 - PulseAudio Control der internen LXCs
 - Graphics Acceleration in internen LXCs
@@ -242,7 +284,7 @@ lxc-to-go bootstrap finished.
 
 
 
-## Viel Spaß
+## Viel Spaß mit LXC-to-Go
 
 - https://github.com/plitc/lxc-to-go
 
