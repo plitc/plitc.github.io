@@ -23,7 +23,7 @@ Note:
 - einfache Container Lösung!
  * fertige LXC configs & templates
  * auch geeignet für Laptops mit wechselnder Netzanbindung
-- erstellt Managed Container mit DHCP, DNS & RA Service für interne LXCs
+- erstellt Managed Container für DHCP, DNS & RA Services
 - automatische NAT Portforwarding Regeln für interne LXCs
  * IPv4 192.168.254.xxx/24
  * IPv6 fd00:xxxx/64
@@ -36,8 +36,8 @@ Note:
 
 ## Schema
 
-<a href="lxc-to-go_schema_.jpg">
-   <img src="content/lxc-to-go_schema_.jpg" height="350">
+<a href="content/lxc-to-go_schema_.jpg">
+   <img src="content/lxc-to-go_schema_.jpg" height="500">
 </a>
 
 
