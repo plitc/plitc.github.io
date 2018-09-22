@@ -38,6 +38,7 @@ usage: { bootstrap | start | stop | shutdown | create | delete | show | login | 
 ## Konzepte / Motivation (3-8)
 
 - Bootstrap Example
+ * ~4500 Lines of Bullshit Code :D
 
 ```shell
 ╭─root at it-daniel in ~ using
@@ -201,7 +202,7 @@ lxc-to-go bootstrap finished.
 ## Konzepte / Motivation (4-8)
 
 - erstellt einen Managed Container!
- * für DHCP, DNS & RA Services
+ * für DHCP, DNS & RA Service
 
 - automatische NAT Portforwarding Regeln für interne LXCs
  * IPv4 192.168.254.xxx/24 & IPv6 fd00:xxxx/64
@@ -225,6 +226,7 @@ lxc-to-go bootstrap finished.
 ## Konzepte / Motivation (6-8)
 
 - App Container Templates Example
+* like Docker Hub :D
 
 ```shell
 ╭─daniel at it-daniel in /github/lxc-to-go/hooks/templates on master✔ using
