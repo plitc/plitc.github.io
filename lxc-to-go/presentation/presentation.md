@@ -9,7 +9,6 @@
 ## Konzepte / Motivation (1-7)
 
 - einfache Container Lösung!
- * fertige LXC configs & templates
  * auch geeignet für Laptops mit wechselnder Netzanbindung
 
 ```shell
@@ -28,7 +27,7 @@ usage: { bootstrap | start | stop | shutdown | create | delete | show | login | 
 
 ## Konzepte / Motivation (2-7)
 
-- einfacher Bootstrap Prozess
+- einfacher Bootstrap Prozess!
 
 <a href="content/lxc-to-go_schema_.jpg">
    <img src="content/lxc-to-go_schema_.jpg" height="500">
@@ -185,6 +184,7 @@ usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
    Loaded: loaded (/etc/init.d/radvd)
 
 [  OK  ] 'lxc: managed radvd'
+
 [  OK  ] 'optional: sysctl for unprivileged containers'
 [  OK  ] 'optional: load fuse module for unprivileged containers'
 fs.file-max = 99000000
@@ -200,7 +200,9 @@ lxc-to-go bootstrap finished.
 
 ## Konzepte / Motivation (4-7)
 
-- erstellt einen Managed Container für DHCP, DNS & RA Services
+- erstellt einen Managed Container!
+ * für DHCP, DNS & RA Services
+
 - automatische NAT Portforwarding Regeln für interne LXCs
  * IPv4 192.168.254.xxx/24 & IPv6 fd00:xxxx/64
 
@@ -212,7 +214,7 @@ lxc-to-go bootstrap finished.
 
 ## Konzepte / Motivation (5-7)
 
-- App Container Templates
+- App Container Templates!
 
 <a href="content/lxc-to-go_inside_.jpg">
    <img src="content/lxc-to-go_inside_.jpg" height="350">
