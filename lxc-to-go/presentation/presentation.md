@@ -6,43 +6,44 @@
 
 
 
-## Ablauf
-
-1. Konzept / Motivation
-2. Features
-3. Grundlagen
-4. Demo
-
-Note:
-- Grundlagen:
-
-
-
-## Konzept / Motivation
+## Konzepte / Motivation (1-6)
 
 - einfache Container Lösung!
  * fertige LXC configs & templates
  * auch geeignet für Laptops mit wechselnder Netzanbindung
-- erstellt Managed Container für DHCP, DNS & RA Services
-- automatische NAT Portforwarding Regeln für interne LXCs
- * IPv4 192.168.254.xxx/24
- * IPv6 fd00:xxxx/64
-- PulseAudio Control der internen LXCs
-- Graphics Acceleration in internen LXCs
-- Nested LXC / LXC-inside-LXC Container Webpanel
- * für Wegwerf inside LXC, Docker Container
+
+```shell
+╭─root at it-daniel in /var/lib/lxc/managed using
+╰─○ grep "lxc.cap" config | egrep -v "#"
+
+lxc.cap.drop=sys_module
+lxc.cap.drop=mac_admin
+lxc.cap.drop=mac_override
+lxc.cap.drop=sys_time
+lxc.cap.drop=sys_boot
+lxc.cap.drop=sys_pacct
+lxc.cap.drop=sys_rawio
+lxc.cap.drop=sys_tty_config
+
+╭─root at it-daniel in /var/lib/lxc/managed using
+╰─○
+```
 
 
 
-## Schema
+## Konzepte / Motivation (2-6)
+
+- einfacher Bootstrap Prozess
 
 <a href="content/lxc-to-go_schema_.jpg">
-   <img src="content/lxc-to-go_schema_.jpg" height="600">
+   <img src="content/lxc-to-go_schema_.jpg" height="500">
 </a>
 
 
 
-## Bootstrap
+## Konzepte / Motivation (3-6)
+
+- erstellt einen flexiblen Managed Container für DHCP, DNS & RA Services
 
 ```shell
 ╭─root at it-daniel in ~ using
@@ -221,6 +222,38 @@ lxc-to-go bootstrap finished.
 ╰─○
 ```
 
+
+
+## Konzepte / Motivation (4-6)
+
+- automatische NAT Portforwarding Regeln für interne LXCs
+ * IPv4 192.168.254.xxx/24
+ * IPv6 fd00:xxxx/64
+
+<a href="content/lxc-to-go_desktop_.jpg">
+   <img src="content/lxc-to-go_desktop_.jpg" height="500">
+</a>
+
+
+
+
+
+
+
+
+ 58 - PulseAudio Control der internen LXCs
+ 59 - Graphics Acceleration in internen LXCs
+ 60 - Nested LXC / LXC-inside-LXC Container Webpanel
+ 61  * für Wegwerf inside LXC, Docker Container
+ 62
+ 63
+ 64
+ 65 ## Schema
+ 66
+ 67 <a href="content/lxc-to-go_schema_.jpg">
+ 68    <img src="content/lxc-to-go_schema_.jpg" height="550">
+ 69 </a>
+ 70
 
 
 ## Motivation
