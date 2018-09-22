@@ -20,8 +20,13 @@ Note:
 
 ## Konzept / Motivation
 
-- einfache Container Lösung (auch geeignet für Laptops mit wechselnder Netzanbindung)
+- einfache Container Lösung
+(auch geeignet für Laptops mit wechselnder Netzanbindung)
 - 
+
+
+
+## Schema
 
 ![](content/lxc-to-go_schema_.jpg)
 
