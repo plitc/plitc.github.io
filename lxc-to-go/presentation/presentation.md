@@ -18,7 +18,8 @@
 
 WARNING: lxc-to-go is experimental and its not ready for production. Do it at your own risk.
 
-usage: /usr/local/sbin/lxc-to-go { bootstrap | start | stop | shutdown | create | delete | show | login | lxc-in-lxc-webpanel | security }
+usage: { bootstrap | start | stop | shutdown | create | delete | show | login | lxc-in-lxc-webpanel | security }
+
 ╭─root at it-daniel in ~ using
 ╰─○
 ```
