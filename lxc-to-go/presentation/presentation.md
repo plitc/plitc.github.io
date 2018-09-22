@@ -38,7 +38,7 @@ usage: { bootstrap | start | stop | shutdown | create | delete | show | login | 
 ## Konzepte / Motivation (3-8)
 
 - Bootstrap Example
- * ~4500 Lines of Bullshit Code  xD
+ * ~4500 Lines of Bullshit Code *(^_^)*
 
 ```shell
 ╭─root at it-daniel in ~ using
@@ -226,7 +226,7 @@ lxc-to-go bootstrap finished.
 ## Konzepte / Motivation (6-8)
 
 - App Container Templates Example
-* like Docker Hub  *(^_^)*
+ * like Docker Hub *(^_^)*
 
 ```shell
 ╭─daniel at it-daniel in /github/lxc-to-go/hooks/templates on master✔ using
