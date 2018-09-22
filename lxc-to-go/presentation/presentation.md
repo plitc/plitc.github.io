@@ -232,7 +232,6 @@ lxc-to-go bootstrap finished.
 ╭─daniel at it-daniel in /github/lxc-to-go/hooks/templates on master✔ using
 ╰─± find
 
-.
 ./com.docker
 ./com.docker_lxcdriver
 ./com.docker_x11gui
